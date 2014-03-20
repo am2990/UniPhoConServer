@@ -1,0 +1,6 @@
+E:\Studies\Dropbox\PHNGame\Server\RemoteServer\TCPServer\bin\Debug\TCPServer.exe.config
+E:\Studies\Dropbox\PHNGame\Server\RemoteServer\TCPServer\bin\Debug\TCPServer.exe
+E:\Studies\Dropbox\PHNGame\Server\RemoteServer\TCPServer\bin\Debug\TCPServer.pdb
+E:\Studies\Dropbox\PHNGame\Server\RemoteServer\TCPServer\obj\Debug\TCPServer.csprojResolveAssemblyReference.cache
+E:\Studies\Dropbox\PHNGame\Server\RemoteServer\TCPServer\obj\Debug\TCPServer.exe
+E:\Studies\Dropbox\PHNGame\Server\RemoteServer\TCPServer\obj\Debug\TCPServer.pdb

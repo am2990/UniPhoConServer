@@ -1,0 +1,20 @@
+E:\PHNGame\Server\RemoteServer\RemoteServer\bin\Debug\RemoteServer.exe
+E:\PHNGame\Server\RemoteServer\RemoteServer\bin\Debug\RemoteServer.pdb
+E:\PHNGame\Server\RemoteServer\RemoteServer\bin\Debug\InputSimulator.dll
+E:\PHNGame\Server\RemoteServer\RemoteServer\obj\x86\Debug\RemoteServer.csprojResolveAssemblyReference.cache
+E:\PHNGame\Server\RemoteServer\RemoteServer\obj\x86\Debug\RemoteServer.mainForm.resources
+E:\PHNGame\Server\RemoteServer\RemoteServer\obj\x86\Debug\RemoteServer.Properties.Resources.resources
+E:\PHNGame\Server\RemoteServer\RemoteServer\obj\x86\Debug\RemoteServer.csproj.GenerateResource.Cache
+E:\PHNGame\Server\RemoteServer\RemoteServer\obj\x86\Debug\RemoteServer.exe
+E:\PHNGame\Server\RemoteServer\RemoteServer\obj\x86\Debug\RemoteServer.pdb
+E:\Studies\Dropbox\PHNGame\Server\RemoteServer\RemoteServer\obj\x86\Debug\RemoteServer.exe
+E:\Studies\Dropbox\PHNGame\Server\RemoteServer\RemoteServer\obj\x86\Debug\RemoteServer.pdb
+E:\Studies\Dropbox\PHNGame\Server\RemoteServer\RemoteServer\bin\Debug\RemoteServer.exe
+E:\Studies\Dropbox\PHNGame\Server\RemoteServer\RemoteServer\bin\Debug\RemoteServer.pdb
+E:\Studies\Dropbox\PHNGame\Server\RemoteServer\RemoteServer\bin\Debug\InputSimulator.dll
+E:\Studies\Dropbox\PHNGame\Server\RemoteServer\RemoteServer\obj\x86\Debug\RemoteServer.csprojResolveAssemblyReference.cache
+E:\Studies\Dropbox\PHNGame\Server\RemoteServer\RemoteServer\obj\x86\Debug\RemoteServer.mainForm.resources
+E:\Studies\Dropbox\PHNGame\Server\RemoteServer\RemoteServer\obj\x86\Debug\RemoteServer.Properties.Resources.resources
+E:\Studies\Dropbox\PHNGame\Server\RemoteServer\RemoteServer\obj\x86\Debug\RemoteServer.csproj.GenerateResource.Cache
+E:\Studies\Projects\Windows Phone\UniPhoConServer\RemoteServer\RemoteServer\obj\x86\Debug\RemoteServer.exe
+E:\Studies\Projects\Windows Phone\UniPhoConServer\RemoteServer\RemoteServer\obj\x86\Debug\RemoteServer.pdb
