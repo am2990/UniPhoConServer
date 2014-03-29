@@ -34,9 +34,10 @@
             // 
             // serverStart_btn
             // 
-            this.serverStart_btn.Location = new System.Drawing.Point(12, 30);
+            this.serverStart_btn.Location = new System.Drawing.Point(13, 37);
+            this.serverStart_btn.Margin = new System.Windows.Forms.Padding(4);
             this.serverStart_btn.Name = "serverStart_btn";
-            this.serverStart_btn.Size = new System.Drawing.Size(75, 23);
+            this.serverStart_btn.Size = new System.Drawing.Size(346, 115);
             this.serverStart_btn.TabIndex = 0;
             this.serverStart_btn.Text = "Start Server";
             this.serverStart_btn.UseVisualStyleBackColor = true;
@@ -46,19 +47,21 @@
             // 
             this.ipAddress_label.AutoSize = true;
             this.ipAddress_label.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ipAddress_label.Location = new System.Drawing.Point(150, 40);
+            this.ipAddress_label.Location = new System.Drawing.Point(60, 176);
+            this.ipAddress_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ipAddress_label.Name = "ipAddress_label";
-            this.ipAddress_label.Size = new System.Drawing.Size(88, 13);
+            this.ipAddress_label.Size = new System.Drawing.Size(114, 17);
             this.ipAddress_label.TabIndex = 1;
             this.ipAddress_label.Text = "Not Connected...";
             // 
             // mainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(285, 174);
+            this.ClientSize = new System.Drawing.Size(372, 216);
             this.Controls.Add(this.ipAddress_label);
             this.Controls.Add(this.serverStart_btn);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "mainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "joyPhone Server";

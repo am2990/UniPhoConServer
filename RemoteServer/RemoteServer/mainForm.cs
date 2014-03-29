@@ -19,51 +19,31 @@ namespace RemoteServer
         public mainForm()
         {
             InitializeComponent();
-            
         }
+
         Thread connection;
-        bool conStart=false,xlocked=false,ylocked=false;
-        float acclimit = 0.2f,xacclimit=0.13f;
-        String[] t = new string[100];
-        
-        int up=65,down=66,right=67,left=68,pos_x=1,pos_y=1;
-        int[] staticDegrees={-7,0,7};
-        float acc_x=0, acc_y=0,ax=0,ay=0,acc_xOld,acc_yOld,alim=1f;
-        float changeLimit=(float)3;
+        bool conStart = false;
+        bool udptest = false;
+        UdpClient newsock;
+
+
         private void establishConnection(){
-           
-            t[65] = "up";
-            t[66] = "down";
-            t[67] = "right";
-            t[68] = "left";
             byte[] data = new byte[1024];
-            IPEndPoint ipep = new IPEndPoint(IPAddress.Any, 9908);
-            UdpClient newsock = new UdpClient(ipep);
+            IPEndPoint ipep = new IPEndPoint(IPAddress.Any, 12424);
+            if (udptest == false)
+            {
+                newsock = new UdpClient(ipep);
+                udptest = true;
+            }
             IPHostEntry hostname = Dns.GetHostEntry("");
             IPAddress[] ip = hostname.AddressList;
-            //ipAddress_label.Text = ip[0].ToString();
-            Console.WriteLine("Waiting for a client...");
-
             IPEndPoint sender = new IPEndPoint(IPAddress.Any, 0);
-            
-            //data = newsock.Receive(ref sender);
-
-            //Console.WriteLine("Message received from {0}:", sender.ToString());
-            //Console.WriteLine(Encoding.ASCII.GetString(data, 0, data.Length));
-            //conStart = true;
-            //string welcome = "Welcome to my test server";
-            //data = Encoding.ASCII.GetBytes(welcome);
-            //newsock.Send(data, data.Length, sender);
-
+                       
             while (conStart)
             {
-                //Console.WriteLine("waiting");
                 data = newsock.Receive(ref sender);
                 string str = Encoding.ASCII.GetString(data, 0, data.Length);
                 int count = str.Split(':').Length;
-                //while (count < str.Length && str[count] == ':') count++;
-                //Console.WriteLine(str);
-                //Console.Clear();
                 if (count == 2)
                 {
                     int key = int.Parse(str.Split(':')[1]);
@@ -72,54 +52,14 @@ namespace RemoteServer
                 }
                 else if (count == 3)
                 {
-                    
                     float x = float.Parse(str.Split(':')[0]);
                     float y = float.Parse(str.Split(':')[1]);
                     float z = float.Parse(str.Split(':')[0]);
                     //Console.WriteLine(str + "|X:" + x + "|Y:" + y + "|Z: " + z);
-                    if (x > xacclimit)
-                    {
-                        processKey(1, up);
-                    }
-                    else
-                    {
-                        processKey(0, up);
-                    }
-
-                    if (x < (-1) * xacclimit)
-                    {
-                        processKey(1, down);
-                    }
-                    if (x > (-1) *xacclimit)
-                    {
-                        processKey(0, down);
-                    }
-
-                    if (y > acclimit)
-                    {
-                        processKey(1, left);
-                    }
-                    else
-                    {
-                        processKey(0, left);
-                    }
-
-                    if (y < (-1) * acclimit)
-                    {
-                        processKey(1, right);
-                    }
-                    if (y > (-1) * acclimit)
-                    {
-                        processKey(0,right);
-                    }
-
                 }
-                
-                //Console.WriteLine(str);
-                //newsock.Send(data, data.Length, sender);
+
             }
 
-            Console.WriteLine("this should be ending it");
         }
 
         private void processKey(int click,int key){
@@ -128,7 +68,6 @@ namespace RemoteServer
                 if (!InputSimulator.IsKeyDown((VirtualKeyCode)key))
                 {
                     InputSimulator.SimulateKeyDown((VirtualKeyCode)key);
-                    Console.WriteLine("pressing: " + t[key]);
                 }
 
             }
@@ -137,10 +76,24 @@ namespace RemoteServer
                 if (InputSimulator.IsKeyDown((VirtualKeyCode)key))
                 {
                     InputSimulator.SimulateKeyUp((VirtualKeyCode)key);
-                    Console.WriteLine("Releasing : " + t[key]);
                 }
 
             }
+        }
+
+        private static string getMmyIp()
+        {
+            IPHostEntry host;
+            string localIP = "?";
+            host = Dns.GetHostEntry(Dns.GetHostName());
+            foreach (IPAddress ip in host.AddressList)
+            {
+                if (ip.AddressFamily.ToString() == "InterNetwork")
+                {
+                    localIP = ip.ToString();
+                }
+            }
+            return localIP;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -148,7 +101,8 @@ namespace RemoteServer
            
             IPHostEntry hostname = Dns.GetHostEntry("");
             IPAddress[] ip = hostname.AddressList;
-            ipAddress_label.Text = ip[0].ToString();
+            ipAddress_label.Text = "Disconnected";
+            
             if (conStart)
             {
                 Console.WriteLine("Ending Connection");
@@ -164,14 +118,12 @@ namespace RemoteServer
                 connection.Name = "conThread";
                 connection.Start();
                 Button btn = (Button)sender;
+                //string iptoadd = ip[0].ToString();
+                ipAddress_label.Text = "Connected IP= " + getMmyIp() + " Port = 12424";
                 btn.Text="Stop Connection";
+                //Application.Exit();
             }
-           // InputSimulator.SimulateKeyDown((VirtualKeyCode)6);
-            
-            //Thread.Sleep(5000);
-            //InputSimulator.SimulateKeyDown(VirtualKeyCode.VK_A);
-            //Thread.Sleep(2000);
-            //InputSimulator.SimulateKeyUp(VirtualKeyCode.VK_A);
+           
         }
     }
 }

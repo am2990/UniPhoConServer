@@ -25,9 +25,6 @@ namespace RemoteServer
             Console.WriteLine("In Main: Creating the Child thread");
             Thread udpSevrThrdHandle = new Thread(udpServerThread);
             udpSevrThrdHandle.Start();
-            //stop the main thread for some time
-
-
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new mainForm());
