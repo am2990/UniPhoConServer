@@ -125,5 +125,15 @@ namespace RemoteServer
             }
            
         }
+
+        private void mainForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
+        }
     }
 }

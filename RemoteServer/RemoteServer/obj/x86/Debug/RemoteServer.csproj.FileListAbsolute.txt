@@ -18,3 +18,11 @@ E:\Studies\Dropbox\PHNGame\Server\RemoteServer\RemoteServer\obj\x86\Debug\Remote
 E:\Studies\Dropbox\PHNGame\Server\RemoteServer\RemoteServer\obj\x86\Debug\RemoteServer.csproj.GenerateResource.Cache
 E:\Studies\Projects\Windows Phone\UniPhoConServer\RemoteServer\RemoteServer\obj\x86\Debug\RemoteServer.exe
 E:\Studies\Projects\Windows Phone\UniPhoConServer\RemoteServer\RemoteServer\obj\x86\Debug\RemoteServer.pdb
+C:\Users\Pranav\Documents\GitHub\UniPhoConServer\RemoteServer\RemoteServer\bin\Debug\RemoteServer.exe
+C:\Users\Pranav\Documents\GitHub\UniPhoConServer\RemoteServer\RemoteServer\bin\Debug\RemoteServer.pdb
+C:\Users\Pranav\Documents\GitHub\UniPhoConServer\RemoteServer\RemoteServer\bin\Debug\InputSimulator.dll
+C:\Users\Pranav\Documents\GitHub\UniPhoConServer\RemoteServer\RemoteServer\obj\x86\Debug\RemoteServer.mainForm.resources
+C:\Users\Pranav\Documents\GitHub\UniPhoConServer\RemoteServer\RemoteServer\obj\x86\Debug\RemoteServer.Properties.Resources.resources
+C:\Users\Pranav\Documents\GitHub\UniPhoConServer\RemoteServer\RemoteServer\obj\x86\Debug\RemoteServer.csproj.GenerateResource.Cache
+C:\Users\Pranav\Documents\GitHub\UniPhoConServer\RemoteServer\RemoteServer\obj\x86\Debug\RemoteServer.exe
+C:\Users\Pranav\Documents\GitHub\UniPhoConServer\RemoteServer\RemoteServer\obj\x86\Debug\RemoteServer.pdb
