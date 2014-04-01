@@ -16,6 +16,7 @@ namespace RemoteServer
 {
     public partial class mainForm : Form
     {
+        private int modifiedStrokeFlag = 0;
         public mainForm()
         {
             InitializeComponent();
@@ -46,9 +47,17 @@ namespace RemoteServer
                 int count = str.Split(':').Length;
                 if (count == 2)
                 {
-                    int key = int.Parse(str.Split(':')[1]);
+                    
                     int click = int.Parse(str.Split(':')[0]);
+                    if (click > 2)
+                    {
+                        string keys = str.Split(':')[1];
+                        processModifiedStroke(click, keys);
+                        continue;
+                    }
+                    int key = int.Parse(str.Split(':')[1]);
                     processKey(click,key);
+                    continue;
                 }
                 else if (count == 3)
                 {
@@ -60,6 +69,21 @@ namespace RemoteServer
 
             }
 
+        }
+
+        private void processModifiedStroke(int click, string keys)
+        {
+            
+            int key_1 = int.Parse(keys.Split(',')[0]);
+            int key_2 = int.Parse(keys.Split(',')[1]);
+
+                if (modifiedStrokeFlag != click)
+                {
+                    InputSimulator.SimulateModifiedKeyStroke((VirtualKeyCode)key_1, (VirtualKeyCode)key_2);
+                    modifiedStrokeFlag = click;
+                }
+
+            
         }
 
         private void processKey(int click,int key){
